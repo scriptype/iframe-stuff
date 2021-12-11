@@ -1,6 +1,6 @@
 const penContainer = document.getElementById('penContainer')
 
-const displayDuration = 5 // seconds
+const displayDuration = 50 // seconds
 
 const getRandomFrom = (list) => {
   return list[Math.floor(Math.random() * list.length)]
@@ -50,7 +50,7 @@ const renderPen = (pen) => {
   const iframe = createIframe(pen)
   penContainer.appendChild(iframe)
   setTimeout(() => {
-    iframe.style.zIndex = 0;
+    iframe.style.zIndex = 0
     if (tv) {
       tv.remove()
     }
