@@ -1,6 +1,6 @@
 const penContainer = document.getElementById('penContainer')
 
-const displayDuration = 3600 // seconds
+const displayDuration = 60 // seconds
 
 const getRandomFrom = (list) => {
   return list[Math.floor(Math.random() * list.length)]
