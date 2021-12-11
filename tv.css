@@ -9,7 +9,8 @@ body {
     position: absolute;
     z-index: -1;
     top: -55px;
-    width: 100%;
+    left: -1px;
+    width: calc(100% + 2px);
     height: calc(100% + 90px);
     overflow: hidden;
     display: block;
