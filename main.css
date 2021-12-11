@@ -10,3 +10,19 @@ body iframe {
   left: 0;
   bottom: 0;
 }
+
+button {
+  position: absolute;
+  width: 135px;
+  height: 56px;
+  bottom: 0;
+  left: 60px;
+  border: 0;
+  color: rgb(94, 121, 133);
+  background: #111;
+  margin: 3px 1px;
+}
+
+button:hover {
+  cursor: pointer;
+}
