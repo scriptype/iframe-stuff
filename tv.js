@@ -160,11 +160,13 @@ const isDifferentVisual = (visual) => {
   return visual.url !== currentVisual.url
 }
 
-const visuals = fetch('./tv.json').then(r => r.json())
+const getVisuals = async () => {
+  return fetch(`./tv.json?t=${new Date().getTime()}`).then(r => r.json())
+}
 
 let currentVisual = { url: '' }
 const init = async () => {
-  const visual = getUniqueRandomFrom(await visuals, isDifferentVisual)
+  const visual = getUniqueRandomFrom(await getVisuals(), isDifferentVisual)
   currentVisual = visual
   render(visual)
 }

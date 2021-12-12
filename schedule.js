@@ -14,25 +14,27 @@ const renderSchedule = (schedule) => {
     <div class="overlay-box schedule-box">
       <div class="schedule-box__title">${schedule.title}</div>
       <div class="schedule-box__description">${schedule.desc}</div>
-      <div class="schedule-box__url"><a href="${schedule.url}" target="_blank">${schedule.url}</a></div>
+      ${schedule.url ? `<div class="schedule-box__url"><a href="${schedule.url}" target="_blank">${schedule.url}</a></div>` : ''}
       ${timeLeft > 0 ? `<div class="schedule-box__start">in ${Math.floor(timeLeft / 60000)} minutes</div>` : ''}
     </div>
   `
   scheduleContainer.innerHTML = div
 }
 
-const scheduleData = fetch('./schedule.json')
-  .then(r => r.json())
-  .then(r => r instanceof Array ? r : [])
+const getScheduleData = async () => {
+  return fetch(`./schedule.json?t=${new Date().getTime()}`)
+    .then(r => r.json())
+    .then(r => r instanceof Array ? r : [])
+}
 
 const scheduleInit = async () => {
-  const now = getNow(await scheduleData)
+  const now = getNow(await getScheduleData())
   renderSchedule(now)
 }
 
 setInterval(
   scheduleInit,
-  20000
+  60000
 )
 
 scheduleInit()
