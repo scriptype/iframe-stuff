@@ -5,13 +5,13 @@ const IMAGE_PATTERN = /(\.png|\.jpg|\.jpeg|\.svg|\.gif|\.webp)$/i
 const VIDEO_PATTERN = /(\.mp4|\.webm|\.mpeg|\.ogg)$/i
 const displayDuration = 60 // seconds
 
-let nowDisplaying = {
-  url: null
+const getRandomFrom = (list) => {
+  return list[Math.floor(Math.random() * list.length)]
 }
 
-const getRandomFrom = (list) => {
-  nowDisplaying = list.filter(l => l.url != nowDisplaying.url)[Math.floor(Math.random() * (list.length - 1))]
-  return nowDisplaying
+const getUniqueRandomFrom = (list, excludeFn) => {
+  const uniqueList = list.filter(excludeFn)
+  return getRandomFrom(uniqueList)
 }
 
 const getElementFromMarkup = (markup) => {
@@ -135,10 +135,16 @@ const render = (visual) => {
   }, tv ? 1500 : 0)
 }
 
+const isDifferentVisual = (visual) => {
+  return visual.url !== currentVisual.url
+}
+
 const visuals = fetch('./tv.json').then(r => r.json())
 
+let currentVisual = { url: '' }
 const init = async () => {
-  const visual = getRandomFrom(await visuals)
+  const visual = getUniqueRandomFrom(await visuals, isDifferentVisual)
+  currentVisual = visual
   render(visual)
 }
 
