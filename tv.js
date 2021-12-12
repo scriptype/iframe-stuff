@@ -2,8 +2,14 @@ const penContainer = document.getElementById('penContainer')
 
 const displayDuration = 60 // seconds
 
+let nowDisplaying = {
+  user: null,
+  slugHash: null
+}
+
 const getRandomFrom = (list) => {
-  return list[Math.floor(Math.random() * list.length)]
+  nowDisplaying = list.filter(l => l.slugHash != nowDisplaying.slugHash)[Math.floor(Math.random() * list.length)]
+  return nowDisplaying
 }
 
 const getPenDataFromLink = (url) => {
