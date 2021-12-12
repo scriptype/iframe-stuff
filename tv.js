@@ -2,8 +2,9 @@ const tvContainer = document.getElementById('tvContainer')
 
 const displayDuration = 50 // seconds
 
-const CODEPEN_PATTERN = /codepen\.io/
-const IMAGE_PATTERN = /(\.png|\.jpg|\.jpeg|\.svg|\.gif|\.webp)$/
+const CODEPEN_PATTERN = /codepen\.io/i
+const IMAGE_PATTERN = /(\.png|\.jpg|\.jpeg|\.svg|\.gif|\.webp)$/i
+const VIDEO_PATTERN = /(\.mp4|\.webm|\.mpeg|\.ogg)$/i
 
 const getRandomFrom = (list) => {
   return list[Math.floor(Math.random() * list.length)]
@@ -66,8 +67,40 @@ const Renderers = {
       return getElementFromMarkup(html)
     }
 
-    const render = (link) => {
-      return createImage(link)
+    const render = (visual) => {
+      return createImage(visual)
+    }
+
+    return {
+      render
+    }
+  })(),
+
+  video: (() => {
+    const createVideo = ({ url, title, author }) => {
+      const html = `<video autoplay muted loop src="${url}" alt="${title} by ${author}" class="tv tv-video" />`
+      return getElementFromMarkup(html)
+    }
+
+    const render = (visual) => {
+      return createVideo(visual)
+    }
+
+    return {
+      render
+    }
+  })(),
+
+  error: (() => {
+    const createErrorMessage = (visual) => {
+      const html = `<p class="tv tv-error">Can't display visual: ${visual.url}. Click here to refresh.</p>`
+      const error = getElementFromMarkup(html)
+      error.addEventListener('click', init)
+      return error
+    }
+
+    const render = (visual) => {
+      return createErrorMessage(visual)
     }
 
     return {
@@ -83,6 +116,11 @@ const render = (visual) => {
     result = Renderers.codepen.render(visual)
   } else if (IMAGE_PATTERN.test(visual.url)) {
     result = Renderers.image.render(visual)
+  } else if (VIDEO_PATTERN.test(visual.url)) {
+    result = Renderers.video.render(visual)
+  } else {
+    result = Renderers.error.render(visual)
+    console.error('Error rendering item:', visual)
   }
   tvContainer.appendChild(result)
   setTimeout(() => {

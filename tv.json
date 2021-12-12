@@ -18,4 +18,14 @@
   "title": "An image",
   "author": "A person",
   "description": "An image should render"
+}, {
+  "url": "errored url",
+  "title": "An image",
+  "author": "A person",
+  "description": "An image should render"
+}, {
+  "url": "https://enes.in/assets/pattern.mp4",
+  "title": "A video",
+  "author": "A video person",
+  "description": "An video should render"
 }]

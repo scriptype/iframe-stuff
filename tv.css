@@ -25,4 +25,29 @@ body {
     transform: translate(-50%, -50%);
     max-width: 100%;
     max-height: 100%;
+    padding: 100vw 100vh;
+    background: #111;
+}
+
+.tv-video {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    padding: 100vw 100vh;
+    background: #111;
+}
+
+.tv-error {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    padding: 100vw 100vh;
+    background: #111;
+    color: crimson;
+    font-family: monospace;
+    cursor: pointer;
 }
