@@ -1,11 +1,18 @@
 [
   {
+    "title": "Now Playing",
+    "desc": "Off-Air: Gokceada Recordings",
+    "start": "12-12-2021 20:40",
+    "live": false,
+    "now": true
+  },
+  {
     "title": "Playing up next",
     "desc": "Live: Iskenceciler",
     "url": "https://iskenceciler.bandcamp.com",
     "start": "12-12-2021 20:00",
     "live": true,
-    "now": true
+    "now": false
   },
   {
     "title": "Playing up next",
@@ -23,7 +30,7 @@
     "now": false
   },
   {
-    "title": "Playing up next",
+    "title": "Now Playing",
     "desc": "Live: Gokce Uygun",
     "start": "12-15-2021 16:40",
     "live": false,
