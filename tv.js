@@ -28,7 +28,7 @@ const Components = {
   createCreditsBox(visual) {
     return getElementFromMarkup(`
       <aside class="overlay-box credits-box">
-        <p class="credits-box__description">${visual.description}</p>
+        ${visual.description ? `<p class="credits-box__description">${visual.description}</p>` : ''}
         <p class="credits-box__title-and-author">
           <a target="_blank" href="${visual.url}">${visual.title}</a> by ${visual.author}
         </p>
