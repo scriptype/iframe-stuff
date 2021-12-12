@@ -4,6 +4,7 @@ body {
   overflow: hidden;
   background: #111;
 }
+
 body iframe {
   position: absolute;
   width: 62px;
@@ -26,4 +27,25 @@ button {
 
 button:hover {
   cursor: pointer;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: lightskyblue;
+}
+
+.overlay-box {
+    position: absolute;
+    top: var(--top);
+    left: var(--left);
+    bottom: var(--bottom);
+    right: var(--right);
+    padding: 1.25em 1.5em;
+    font: normal 14px/1.4 helvetica, arial, sans-serif;
+    background: rgba(0, 0, 0, .8);
+    color: rgb(94, 121, 133);
 }

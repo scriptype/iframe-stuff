@@ -20,6 +20,23 @@ const getElementFromMarkup = (markup) => {
   return el.firstElementChild
 }
 
+const Components = {
+  createContainer() {
+    return getElementFromMarkup(`<div class="tv-container"></div>`)
+  },
+
+  createCreditsBox(visual) {
+    return getElementFromMarkup(`
+      <aside class="overlay-box credits-box">
+        <p class="credits-box__description">${visual.description}</p>
+        <p class="credits-box__title-and-author">
+          <a target="_blank" href="${visual.url}">${visual.title}</a> by ${visual.author}
+        </p>
+      </aside>
+    `)
+  }
+}
+
 const Renderers = {
   codepen: (() => {
     const getPenDataFromLink = (url) => {
@@ -126,7 +143,11 @@ const render = (visual) => {
     result = Renderers.error.render(visual)
     console.error('Error rendering item:', visual)
   }
-  tvContainer.appendChild(result)
+  const visualContainer = Components.createContainer()
+  const creditsBox = Components.createCreditsBox(visual)
+  visualContainer.appendChild(result)
+  visualContainer.appendChild(creditsBox)
+  tvContainer.appendChild(visualContainer)
   setTimeout(() => {
     result.style.zIndex = 0
     if (tv) {
