@@ -21,6 +21,7 @@ button {
   color: rgb(94, 121, 133);
   background: #000;
   margin: 3px 1px;
+  user-select: none;
 }
 
 button:hover {
