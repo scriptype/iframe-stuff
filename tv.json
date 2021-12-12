@@ -20,17 +20,17 @@
   "description": "An image should render"
 }, {
   "url": "https://codepen.io/josetxu/pen/MWjJjBd",
-  "title": "A different thing",
-  "author": "A different person",
-  "description": "A different thing happens"
+  "title": "Another different thing",
+  "author": "Another different person",
+  "description": "Another different thing happens"
 }, {
   "url": "errored url",
-  "title": "An image",
-  "author": "A person",
-  "description": "An image should render"
+  "title": "An error",
+  "author": "A mistaken person",
+  "description": "Nothing should ever render"
 }, {
   "url": "https://enes.in/assets/pattern.mp4",
   "title": "A video",
   "author": "A video person",
-  "description": "An video should render"
+  "description": "A video should render"
 }]
