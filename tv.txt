@@ -2,7 +2,6 @@ https://codepen.io/KilledByAPixel/pen/BawBKqP
 https://codepen.io/pavlovsk/pen/KKmKNxe
 https://codepen.io/pavlovsk/pen/xxrKQNM
 https://codepen.io/pavlovsk/pen/owNqXW
-https://codepen.io/fractalkitty/pen/dyNBEMr
 https://codepen.io/LydianLights/pen/MWoyzrz
 https://codepen.io/LydianLights/pen/gORMpxV
 https://codepen.io/aecend/pen/KKPrYxV
@@ -18,5 +17,8 @@ https://codepen.io/WebSonick/pen/vjmgu
 https://codepen.io/dilums/pen/yLVBYyw
 https://codepen.io/JohnvandeWater/pen/Pobzwdb
 https://codepen.io/gwannon/pen/bGBdGVq
-https://codepen.io/number-six/pen/MWbwVZP
 https://codepen.io/trusktr/pen/dypwZNP
+https://codepen.io/josetxu/pen/MWjJjBd
+https://codepen.io/isladjan/pen/zYqLxeG
+https://codepen.io/isladjan/pen/bGpjZwN
+https://codepen.io/raczo/pen/rNOyaxW
