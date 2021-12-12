@@ -49,11 +49,12 @@ a {
     font: normal 13px/1.4 helvetica, arial, sans-serif;
     background: rgba(0, 0, 0, .8);
     color: rgb(94, 121, 133);
+    margin: 3px;
 }
 
 .schedule-box {
-  --bottom: 60px;
-  --left: 4px;
+  --bottom: 58px;
+  --left: 0px;
 }
 
 .schedule-box__title {
