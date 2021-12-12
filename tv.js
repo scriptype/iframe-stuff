@@ -131,7 +131,7 @@ const Renderers = {
 }
 
 const render = (visual) => {
-  const tv = document.querySelector('.tv')
+  const tv = document.querySelector('.tv-container')
   let result
   if (CODEPEN_PATTERN.test(visual.url)) {
     result = Renderers.codepen.render(visual)
