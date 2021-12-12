@@ -1,10 +1,21 @@
 .tv {
     position: absolute;
     z-index: -1;
+    overflow: hidden;
+    display: block;
+}
+
+.tv-codepen {
     top: -55px;
     left: -1px;
     width: calc(100% + 2px);
     height: calc(100% + 90px);
-    overflow: hidden;
-    display: block;
+}
+
+.tv-image {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
 }
