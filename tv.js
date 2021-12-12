@@ -1,13 +1,17 @@
 const tvContainer = document.getElementById('tvContainer')
 
-const displayDuration = 50 // seconds
-
 const CODEPEN_PATTERN = /codepen\.io/i
 const IMAGE_PATTERN = /(\.png|\.jpg|\.jpeg|\.svg|\.gif|\.webp)$/i
 const VIDEO_PATTERN = /(\.mp4|\.webm|\.mpeg|\.ogg)$/i
+const displayDuration = 60 // seconds
+
+let nowDisplaying = {
+  url: null
+}
 
 const getRandomFrom = (list) => {
-  return list[Math.floor(Math.random() * list.length)]
+  nowDisplaying = list.filter(l => l.url != nowDisplaying.url)[Math.floor(Math.random() * (list.length - 1))]
+  return nowDisplaying
 }
 
 const getElementFromMarkup = (markup) => {

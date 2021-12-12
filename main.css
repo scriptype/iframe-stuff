@@ -1,0 +1,29 @@
+body {
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  background: #111;
+}
+body iframe {
+  position: absolute;
+  width: 62px;
+  left: 0;
+  bottom: 0;
+}
+
+button {
+  position: absolute;
+  width: 115px;
+  height: 56px;
+  bottom: 0;
+  left: 60px;
+  border: 0;
+  color: rgb(94, 121, 133);
+  background: #000;
+  margin: 3px 1px;
+  user-select: none;
+}
+
+button:hover {
+  cursor: pointer;
+}

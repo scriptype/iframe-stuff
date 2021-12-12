@@ -4,12 +4,12 @@
   "author": "Someone",
   "description": "Something happens"
 }, {
-  "url": "https://codepen.io/finnhvman/pen/abWrPBZ",
+  "url": "https://codepen.io/pavlovsk/pen/KKmKNxe",
   "title": "Something else",
   "author": "Someone else",
   "description": "Something else happens"
 }, {
-  "url": "https://codepen.io/Lipshita/pen/LYjQrLM",
+  "url": "https://codepen.io/pavlovsk/pen/owNqXW",
   "title": "A different thing",
   "author": "A different person",
   "description": "A different thing happens"
@@ -18,6 +18,11 @@
   "title": "An image",
   "author": "A person",
   "description": "An image should render"
+}, {
+  "url": "https://codepen.io/josetxu/pen/MWjJjBd",
+  "title": "A different thing",
+  "author": "A different person",
+  "description": "A different thing happens"
 }, {
   "url": "errored url",
   "title": "An image",
