@@ -12,7 +12,8 @@ body iframe {
   bottom: 0;
 }
 
-button {
+#reAnimate {
+  font: normal 13px/1.4 helvetica, arial, sans-serif;
   position: absolute;
   width: 115px;
   height: 56px;
@@ -20,12 +21,12 @@ button {
   left: 60px;
   border: 0;
   color: rgb(94, 121, 133);
-  background: #000;
+  background: rgba(0, 0, 0, .8);
   margin: 3px 1px;
   user-select: none;
 }
 
-button:hover {
+#reAnimate:hover {
   cursor: pointer;
 }
 
@@ -45,7 +46,29 @@ a {
     bottom: var(--bottom);
     right: var(--right);
     padding: 1.25em 1.5em;
-    font: normal 14px/1.4 helvetica, arial, sans-serif;
+    font: normal 13px/1.4 helvetica, arial, sans-serif;
     background: rgba(0, 0, 0, .8);
     color: rgb(94, 121, 133);
 }
+
+.schedule-box {
+  --bottom: 60px;
+  --left: 4px;
+}
+
+.schedule-box__title {
+  font-size: 1.25em;
+  margin-bottom: .5em;
+}
+
+.schedule-box__description {
+  font-size: 1em;
+  margin-bottom: .5em;
+}
+
+.schedule-box__start {
+  font-size: 0.9em;
+  margin-bottom: .5em;
+}
+
+.schedule-box__title-and-author {}
